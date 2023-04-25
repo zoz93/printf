@@ -14,9 +14,7 @@ int AA_spec_printf(const char *format, va_list args)
 	{
 		if (p_state == 0)
 		{
-			if (*format == '%' && *(format + 1) == '\0')
-				return (-1);
-			else if (*format == '%' && *(format + 1) == '%')
+			if (*format == '%' && *(format + 1) == '%')
 			{
 				_putchar('%');
 				printed_len++;
